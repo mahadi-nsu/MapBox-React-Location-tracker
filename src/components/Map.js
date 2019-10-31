@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'reactn';
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import useLocation from "../hooks/UseLocation";
 
 const TOKEN =  "pk.eyJ1IjoibWFoYWRpLW5zdSIsImEiOiJjazI3Nmt1aWgwczNoM21reGgzZzhtNGJiIn0.vxdLJWEwFqL_w5nPmtIthg";
@@ -56,7 +56,7 @@ const Map = () => {
               longitude={location.longitude}
               offsetLeft={-20}
               offsetTop={-10}
-            >
+            >    
               <span style={{ fontSize: `${viewport.zoom * 0.5}rem` }}
                onClick = {addData}
               >📸</span>
